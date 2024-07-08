@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book list</title>
+</head>
+
+<body>
+  <header>
+
+    <h2 class="ms-5 text-center">{{books.length - bookList.length}} libros disponibles</h2>
+    <div class="row text-center" [formGroup]="bookFilter" class="text-center">
+      <!-- <div [formGroup]="bookFilter" class="text-center"> -->
+        <h3>Filtrar por género</h3>
+        <select formControlName="genre" name="genre" (change)="filter()">
+          <option selected value="" disabled>--SELECCIONA UN GENERO--</option>
+          <option value="todos">TODOS</option>
+          <option value="Fantasía">Fantasia</option>
+          <option value="Ciencia ficción">Ciencia Ficción</option>
+          <option value="Zombies">Zombies</option>
+          <option value="Terror">Terror</option>
+        </select>
+      <!-- </div> -->
+    </div>
+  </header>
+
+  <div class="row content">
+    <div [ngClass]="{'col-12':bookList.length===0, 'col-8':bookList.length!==0}">
+      <div class="row">
+        <div [ngClass]="{'col-1':bookList.length===0, 'col-3':bookList.length!==0}" class="card ms-2 me-2 text-center" *ngFor="let book of books; let i=index">
+          <span *ngIf="added[i]" class="text-bg-danger fs-6 fst-italic text-center mt-2"> libro ya añadido</span>
+          <img class="m-3" id="{{i}}" src="{{book.book.cover}}" alt="Portada" (click)="addToList(book.book.cover, i)">
+          <p class="text-white">{{book.book.title}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-4" *ngIf="bookList.length!=0">
+      <app-list [bookList]="bookList" (removeBook)="removeClass($event)"></app-list>
+    </div>
+  </div>
+
+  <footer class="text-center">Todos los derechos reservados</footer>
+
+</body>
+
+</html>

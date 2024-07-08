@@ -1,0 +1,32 @@
+img{
+    width: auto;
+    height: auto;
+}
+
+.card{
+    position: relative;
+    
+    border: none;
+    margin-top: 1.4rem;
+    background-color: transparent;
+    -webkit-box-shadow: 7px 7px 24px -1px rgba(0,0,0,0.59);
+-moz-box-shadow: 7px 7px 24px -1px rgba(0,0,0,0.59);
+box-shadow: 7px 7px 24px -1px rgba(0,0,0,0.59);
+
+padding: 1.8rem;
+}
+
+i{
+    color: bisque;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+h2{
+    font-family: 'CustomFont';
+    color: white;
+    text-align: center;
+    margin-top: 1rem;
+}

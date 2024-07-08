@@ -1,0 +1,10 @@
+<div class="row">
+    <h2 class="col-9">Lista de lectura ({{bookList.length}} libros añadidos)</h2>
+</div>
+
+<div class="row">
+    <div class="card col-4 ms-2 me-2" *ngFor="let book of bookList; let i=index">
+        <i class=" fa-solid fa-xmark" (click)="removeFromList(i,book)" ></i>
+        <img id="{{'img'+i}}" src="{{book}}"  alt="Libro">
+    </div>
+</div>

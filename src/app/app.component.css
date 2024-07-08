@@ -1,0 +1,55 @@
+
+
+
+img{
+    width: auto;
+    height: auto;
+}
+
+body{
+    height: 100vh;
+}
+
+.card{
+    border: none;
+    margin-top: 1.4rem;
+    background-color: transparent;
+    -webkit-box-shadow: 7px 7px 24px -1px rgba(0,0,0,0.59);
+    -moz-box-shadow: 7px 7px 24px -1px rgba(0,0,0,0.59);
+    box-shadow: 7px 7px 24px -1px rgba(0,0,0,0.59);
+    cursor: pointer;
+}
+
+select{
+    text-align: center;
+    border-color: white;
+}
+
+
+
+
+.img-trans{
+    opacity: 50%;
+}
+
+.available{
+    color: red;
+}
+
+header, footer{
+    background-color: #8fbc8f;
+    padding-bottom: 2rem;
+    font-family: 'CustomFont';
+    color: white;
+}
+
+
+.content{
+    margin:auto;
+    background-color: #a52a2a;
+    padding-bottom: 2rem;
+}
+
+.text-white{
+    color: white;
+}
